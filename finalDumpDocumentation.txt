@@ -1,0 +1,22 @@
+finalDump Documentation
+
+Columns: aiv_index	PMID2	Protein1	Protein2	MI_interaction_detection_method2	MI_interaction_type	alt_ids2	Quality	Pcc	S_cerevisiae	S_pombe	Worm	Fly	Human	Mouse	E_coli	Total_hits	Num_species
+
+aiv_index: integer. limited to values 0, 1, 2. 0 and 1 refer to PPIs. 0 contains both self-interactions and different-protein interactions. 1 includes the same different-protein interactions, but with Protein1 and Protein2 swapped. 2 includes to Protein-DNA interactions.
+
+PMID2: string. contains either (1) the plain PMID of the source, (2) source in the format "PMID-subset_id", where the subset_id refers to a subset of the data from the source, or (3) a placeholder id
+
+Protein1|Protein2: string. contains the AGI code of the Arabidopsis thaliana protein
+
+MI_interaction_detection_method2: nullable string. contains either (1) interaction detection method as MI term, or (2) placeholder
+
+MI_interaction_type: nullable string. contains either (1) interaction type as MI term, or (2) placeholder
+
+alt_ids2: nullable string. contains biogrid ids.
+
+Quality: float. contains score, and the score in which this score falls indicates the kind of score it is.
+
+Pcc: float. pearson correlation coefficient.
+
+S_cerevisiae|S_pombe|Worm|Fly|Human|Mouse|E_coli|Total_hits|Num_species: internspecies fields for a particular subset of data
+
