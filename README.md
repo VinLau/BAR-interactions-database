@@ -18,6 +18,7 @@ Notes regarding files:
 | verifications.test.js | Unit tests to be ran after script INSERTions are completed. Run: `npm run test` see below to run tests individually |
 | ints\_DB\_migration\_jun\_13\_2019.sql.zip | MYSQL dump of the database (5.7). Note date of last update. If you need an updated copy, contact the BAR. ** UNINDEXED, RENAME AND CREATE YOUR OWN DB BEFORE IMPORTING! ** |
 | BAR\_new\_itrns\_db.mwb | MYSQL Workbench file, namely an ERD that visualizes the relationships between the tables. Contains brief descriptions of each column. |
+| itrns_db_idxes.sql | Suggested indexes to add to the database after importing. |
 
 ## ERD Design Explantions
 
