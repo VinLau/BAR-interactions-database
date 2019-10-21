@@ -57,6 +57,14 @@ Table which will store all the unique sources (usually a paper, but not always) 
 
 A table that offers a join for interactions and sources (along with MI terms - a controlled vocabulary for experiments by EMBL). That is, one interaction can be referenced by more than one paper. This table is necessary for efficient querying of <b> (1) How many interactions exist in a paper </b> and <b> (2) Fetching the individual interactions of a paper for visualization. </b>
 
+### Tag Lookup Table (tag\_lookup\_table)
+
+Lookup table for each tag so we can easily categorize them for our front-end app. I.e. group tags like 'Y1H, Y2H, CHIP' under 'experiment' for categorization for the user. Note that since the tag_name is the PK and MySQL is case-insensitive by default, we won't get 'chIP' and 'CHIP' duplicated.
+
+### Source Tag Join Table (source\_tag\_join\_table)
+
+As one paper may have many tags, create a join table where the FKs are the source id and tag_name.
+
 ## Database migration checks:
 
 You can run these individually via the commands below or use `npm run test` to run the whole Jest suite.
